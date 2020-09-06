@@ -1,0 +1,100 @@
+.live-stream-footer {
+  .prev-lesson_container,
+  .next-lesson_container {
+    flex: 0 0 40%;
+    max-width: 40%;
+
+    .prev-lesson-icon,
+    .next-lesson-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(221, 221, 221, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .fa {
+        font-size: 3em;
+        color: rgba(221, 221, 221, 0.6);
+      }
+    }
+
+    & > div {
+      .lesson-type-and-lecture {
+        font-size: 1.5em;
+        color: rgba(221, 221, 221, 0.6);
+        padding-right: 20px;
+      }
+
+      .lesson-head {
+        font-size: 1.7em;
+        font-weight: 900;
+        color: rgba(221, 221, 221, 0.7);
+        padding-right: 20px;
+      }
+    }
+  }
+
+  .prev-lesson_container{
+
+    &:hover{
+        transition: .5s;
+        cursor: pointer;
+        .prev-lesson-icon{
+            border: none!important;
+            background: #195EC8;
+
+            .fa{
+                color: #fff;
+            }
+        }
+        &>div{
+            .lesson-type-and-lecture{
+                color: #fff!important;
+            }
+    
+            .lesson-head{
+                color: #fff;
+            }
+        }
+    }
+
+  }
+
+  .next-lesson_container{
+
+    &:hover{
+        transition: .5s;
+        cursor: pointer;
+        .next-lesson-icon{
+            border: none!important;
+            background: #195EC8;
+
+            .fa{
+                color: #fff;
+            }
+        }
+        &>div{
+            .lesson-type-and-lecture{
+                color: #fff!important;
+            }
+    
+            .lesson-head{
+                color: #fff;
+            }
+        }
+    }
+
+  }
+
+  .complete-btn {
+    border: none;
+    outline: none;
+    background: #195ec8;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+}

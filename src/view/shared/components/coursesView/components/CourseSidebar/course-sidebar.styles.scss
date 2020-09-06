@@ -1,0 +1,124 @@
+.course-sidebar{
+    padding: 35px 20px 20px;
+    box-shadow: -3px 0 5px -3px rgba(221, 221, 221, .7), -3px 0 10px -3px rgba(221, 221, 221, .4);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    .course-sidebar-header_container{
+        .course-sidebar-header{
+            font-size: 1.3em;
+            font-weight: 900;
+        }
+    }
+
+    .sections_container{
+        margin-top: 30px;
+        .section{
+            .section-title{
+                cursor: pointer;
+                border-bottom: 1px solid #e1e2e4;
+                margin-bottom: 10px;
+                &>div:first-child{
+                    h5{
+                        font-size: .8em;
+                        opacity: .7;
+                        margin-bottom: 3px;
+                    }
+
+                    h4{
+                        font-size: 1.2em;
+                        font-weight: 900;
+                    }
+                }
+            }
+
+            .section-content{
+                transform-origin: top;
+                overflow: hidden;
+                .content{
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    .fa-play-circle{
+                        color: #F35151;
+                        font-size: 1.5em;
+                    }
+
+                    .fa-file{
+                        color: lightseagreen;
+                    }
+
+                    &> .fa-question-circle{
+                        font-size: 1.5em;
+                        color: #E42CD9;
+                    }
+
+                    &> .fa-youtube-play{
+                        font-size: 1.5em;
+                        color: #385BCE;
+                    }
+
+                    .content-title{
+                        font-size: 1.2em;
+
+                        span{
+                            font-size: 1em;
+                            opacity: .7;
+                            margin: 0 8px;
+                        }
+                    }
+
+                    .duration{
+                        font-size: .8em;
+                        opacity: .7;
+                    }
+
+                    .completed{
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        background: #ddd;
+                        color: #ddd;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: .8em;
+                        position: relative;
+
+                        input{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            opacity: 0;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+// Conditional Classes
+
+.ht-0{
+    max-height: 0;
+    // transform: scaleY(0);
+    transition-property:max-height;
+    transition-duration: .5s;
+}
+
+.ht-auto{
+    // transform: scaleY(1)!important;
+    max-height: 1000px!important;
+    transition-property:max-height!important;
+    transition-duration: 2s;
+}
+
+@media (max-width: 576px){
+    .course-sidebar{
+        min-height: 100%!important;
+    }
+}

@@ -1,0 +1,7 @@
+.message-list-container {
+  padding: 20px;
+  padding-bottom: 70px;
+  margin-bottom: 30px;
+  max-height: 90%;
+  overflow-y: scroll;
+}

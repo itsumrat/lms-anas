@@ -1,0 +1,145 @@
+.course-header {
+  background: #273044;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 22px 15px 17px 15px;
+
+  .logo_container {
+    flex: 0 0 25%;
+    max-width: 15%;
+    padding: 0 15px;
+  }
+
+  .back-to-dashboard_container {
+    flex: 0 0 50%;
+    max-width: 60%;
+    align-self: flex-end;
+  }
+
+  .right-panel {
+    flex: 0 0 25%;
+    max-width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    // padding-right: 5%;
+
+    .user-img_container {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #fff;
+      color: rgba(68, 68, 68, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5em;
+      z-index: 101;
+    }
+
+    .username_container {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      h5 {
+        font-size: 1em;
+        margin: 0;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+
+      .fa-caret-down {
+        margin-left: 5px;
+        cursor: pointer;
+      }
+
+      .user-dropdown {
+        position: absolute;
+        left: -20%;
+        top: 200%;
+        background: #273044;
+        z-index: 100;
+        width: 200%;
+        border-radius: 0 0 10px 10px;
+        overflow: hidden;
+        transform-origin: top;
+
+        a {
+          padding: 10px 20px;
+          text-decoration: none;
+          color: #fff;
+          font-size: 1.2em;
+          font-weight: 900;
+          display: block;
+
+          &:first-child {
+            padding-bottom: 0;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+
+    & > .fa {
+      font-size: 2em;
+      cursor: pointer;
+
+      &:nth-child(3) {
+        margin: 0 20px;
+        color: red;
+      }
+
+      &:nth-child(4) {
+        color: blue;
+      }
+    }
+  }
+}
+
+// media queries for devices under 768
+
+@media (max-width: 768px) {
+  .course-header {
+    background: #273044;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+
+    .back-to-dashboard_container {
+      margin-top: 15px;
+    }
+
+    .right-panel {
+      justify-content: space-between;
+      margin-top: 20px;
+
+      .username_container {
+        margin-right: auto;
+
+        h5 {
+          font-size: 1.3em;
+        }
+
+        .user-dropdown {
+          a {
+            font-size: 1.5em;
+          }
+        }
+      }
+
+      & > .fa {
+        font-size: 3em;
+      }
+    }
+
+    & > * {
+      flex: 0 0 100% !important;
+      max-width: 100% !important;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.add-course-desc {
+  .course-img-upload_container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border: 2px dashed #ddd;
+
+    input[type='file'],
+    input[type='file']::-webkit-file-upload-button {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .img_container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+      }
+
+      &:hover::before {
+        opacity: 1 !important;
+      }
+    }
+
+    .upload-img_container {
+      color: rgba(0, 0, 0, 0.5);
+      .fa {
+        font-size: 3.2em;
+      }
+
+      .upload-img-text {
+        font-size: 1.4em;
+        font-weight: 900;
+      }
+    }
+
+    &:hover {
+      .img_container {
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      .upload-img_container {
+        color: #fff;
+      }
+    }
+  }
+
+  .description-add_container {
+    border: 2px dashed #ddd;
+  }
+
+  .course-material_container {
+    .course-material_header {
+      font-size: 1.5em;
+      font-weight: 900;
+    }
+
+    .course-material-adder {
+      border: 1px solid #dbdbdb;
+      background: #f7f7f7;
+      cursor: pointer;
+
+      .course-material-add-icon {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #195ec8;
+
+        .fa {
+          color: #fff;
+          font-size: 1.2em;
+        }
+      }
+
+      .course-material-add-text {
+        font-size: 1.3em;
+        font-weight: 500;
+      }
+
+      &:hover {
+        border: 1px solid transparent;
+        background: #195ec8;
+
+        .course-material-add-icon {
+          background: #fff;
+
+          .fa {
+            color: #195ec8;
+            font-size: 1.2em;
+          }
+        }
+
+        .course-material-add-text {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

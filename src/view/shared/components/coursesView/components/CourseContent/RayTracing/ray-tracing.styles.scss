@@ -1,0 +1,49 @@
+.ray-tracing{
+    width: 66.66%;
+    padding: 20px 80px 120px 0;
+    position: relative;
+    .section-title-and-lecture{
+        h5{
+            font-size: 1.5em;
+        }
+    }
+
+    .section-content-title{
+        font-size: 2.5em;
+        font-weight: 900;
+    }
+
+    .section-content-description{
+        font-size: 1.2em;
+        line-height: 20px;
+    }
+
+    .ray-tracing-advantages{
+        h5{
+            font-size: 1.5em;
+            font-weight: 900;
+        }
+
+        ul{
+            li{
+                list-style: none;
+                font-size: 1em;
+                padding-left: 20px;
+                margin-bottom: 10px;
+                position: relative;
+
+                &::before{
+                    content: '';
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background: #385BCE;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                }
+            }
+        }
+    }
+}

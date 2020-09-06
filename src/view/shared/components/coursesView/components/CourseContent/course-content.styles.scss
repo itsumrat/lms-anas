@@ -1,0 +1,35 @@
+.course-content{
+    height: auto!important;
+    min-height: 100vh;
+    overflow: auto;
+    transition: 1s;
+    
+    .video-text-images{
+    width: 66.66%;
+    position: relative;
+    padding-bottom: 120px;
+
+        color: #fff;
+        box-shadow: 0 0 0 10000px #1F2326;
+
+        &>div:nth-child(3){
+            width: 100%!important;
+        }
+        .course-section-title{
+            font-size: 2em;
+        }
+    
+        .course-section-content-title{
+            font-size: 4em;
+            font-weight: 900;
+        }
+    
+        .course-section-description{
+            font-size: 1.4em;
+    
+            span{
+                font-weight: 900;
+            }
+        }
+    }
+}

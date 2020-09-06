@@ -1,0 +1,44 @@
+.course-progress{
+    padding: 20px 10px;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    cursor: pointer;
+
+    .progress-header{
+        font-size: 1.7em;
+        font-weight: 600;
+    }
+
+    .progress-percent_container{
+
+        .progress-indicate{
+            width: 80%;
+            height: 7px;
+            border: 1px solid #ebebeb;
+            border-radius: 7px;
+
+            div{
+                background: #ff1f59;
+                width: 60%;
+                height: 100%;
+            }
+
+        }
+
+        .progress-percent{
+            font-size: .8em;
+            margin: 0;
+            margin-left: 10px;
+            font-weight: 900;
+            border-radius: 2px;
+            background: #ff1f59;
+            color: #fff;
+            padding: 2px 5px;
+        }
+    }
+}

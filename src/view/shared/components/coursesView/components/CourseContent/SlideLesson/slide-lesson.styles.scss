@@ -1,0 +1,52 @@
+.slide-lesson{
+    width: 66.66%;
+    padding: 20px 80px 120px 0;
+    position: relative;
+    .section-title-and-lecture{
+        h5{
+            font-size: 1.5em;
+        }
+    }
+
+    .section-content-title{
+        font-size: 2.5em;
+        font-weight: 900;
+    }
+
+    .slider-images_container{
+        width: 100%;
+        height: 350px;
+        display: flex;
+        overflow: hidden;
+        position: relative;
+
+        &>.fa{
+            font-size: 2.5em;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .fa-angle-left{
+            left: 10px;
+        }
+
+        .fa-angle-right{
+            right: 10px;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .section-content-description{
+        font-size: 1.2em;
+        line-height: 20px;
+    }
+}

@@ -1,0 +1,183 @@
+.assignment-lesson{
+    width: 66.66%;
+    padding: 20px 80px 120px 0;
+    .section-title-and-lecture{
+        h5{
+            font-size: 1.5em;
+        }
+    }
+
+    .section-content-title{
+        font-size: 2.5em;
+        font-weight: 900;
+    }
+
+    .section-content-description{
+        font-size: 1.2em;
+        line-height: 20px;
+    }
+
+    .show-requirements-btn{
+        font-size: 1em;
+        text-decoration: none;
+        color: rgba(0,0,0,.6);
+    }
+
+    .text-editor_container{
+        padding: 15px 10px;
+        background: #fff;
+        box-shadow: 0 0 10px 8px rgba(221,221,221,.6);
+        width: 100%;
+
+        .attach-files-btn_container{
+            width: fit-content;
+            position: relative;
+
+            .attach-files-btn{
+                background: lightseagreen;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .fa{
+                    font-size: 2em;
+                }
+            }
+
+            input[type=file],input[type=file]::-webkit-file-upload-button{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .assignment-start-btn,.send-attachments-btn, .attach-files-btn{
+        border: none;
+            outline: none;
+            background: #195EC8;
+            color: #fff;
+            font-size: .8em;
+            font-weight: 900;
+            padding: 10px 20px;
+            border-radius: 20px;
+    }
+
+    .attachments-sent{
+        width: 100%;
+        .assignment-pending_container{
+            width: 40%;
+            padding: 5px;
+            border-radius: 30px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+
+            .hour-glass_container{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: #385BCE;
+                font-size: 1em;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .assignment-pending-text{
+                font-size: 1em;
+                font-weight: 900;
+            }
+        }
+
+        .attachments_container{
+            width: 100%;
+            min-height: 100px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px 8px rgba(221,221,221,.6);
+
+            &>div{
+                width: 100%;
+                height: 100%;
+                background: #ddd;
+                padding: 10px;
+
+                .attachments{
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+}
+
+// media queries for devices 
+
+@media (max-width: 576px){
+    .assignment-lesson{
+    
+        .section-content-description{
+            font-size: 1.2em;
+            line-height: 20px;
+        }
+    
+        .show-requirements-btn{
+            font-size: 1.5em;
+        }
+
+        .assignment-requirements{
+            p{
+                font-size: 1.3em;
+            }
+        }
+    
+        .text-editor_container{
+            width: 100%;
+    
+            .attach-files-btn_container{
+    
+                .attach-files-btn{
+                    font-size: 1em;
+                }
+            }
+        }
+    
+        .assignment-start-btn,.send-attachments-btn, .attach-files-btn{
+            width: 100%;
+            font-size: 1.3em;
+        }
+    
+        .attachments-sent{
+            width: 100%;
+            .assignment-pending_container{
+                width: 100%;
+    
+                .hour-glass_container{
+
+                    .fa{
+                        font-size: 1.3em;
+                    }
+                }
+    
+                .assignment-pending-text{
+                    font-size: 1.3em;
+                    font-weight: 900;
+                }
+            }
+    
+            .attachments_container{
+    
+                &>div{
+                    .attachments{
+                        font-size: 1.8em;
+                    }
+                }
+            }
+        }
+    }
+}

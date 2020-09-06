@@ -1,0 +1,71 @@
+.course-details-adder {
+    border-radius: 3px;
+    background: #f1f1f1;
+
+    .course-file-title_header,
+    .upload-course-file_header {
+      .course-file-title,
+      .upload-course-file {
+        font-size: 1.4em;
+        font-weight: 900;
+      }
+
+      & > .fa {
+        font-size: 2em;
+        opacity: 0.3;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .course-title-input, .faq-answer {
+      width: 100%;
+      padding: 8px;
+      outline: none;
+      border: 1px solid #babcc1;
+      background: #fff;
+      border-radius: 5px;
+      font-size: 1.5em;
+
+      &:focus {
+        border-color: #195ec8;
+      }
+    }
+
+    .faq-answer{
+        min-height: 100px;
+    }
+
+    .choose-file-btn {
+      position: relative;
+      width: 100%;
+      color: #fff;
+      background: #195ec8;
+      border-radius: 5px;
+      padding: 10px;
+
+      input[type="file"],
+      input[type="file"]::-webkit-file-upload-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .fa {
+        font-size: 1.5em;
+      }
+
+      .choose-file {
+        font-size: 1.3em;
+        font-weight: 900;
+      }
+    }
+  }

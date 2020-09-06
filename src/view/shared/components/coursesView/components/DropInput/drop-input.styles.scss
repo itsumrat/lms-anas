@@ -1,0 +1,50 @@
+.drop-input_container{
+    position: relative;
+    outline: none;
+    z-index: 1;
+    .title_container{
+        outline: none;
+        border: rgba(56,91,206,.8) dashed 2px;
+        .title{
+            font-size: 4em;
+            opacity: .6;
+            cursor: pointer;
+            padding: 8px 0;
+            word-break: break-all;
+
+            b{
+                font-weight: 900;
+            }
+        }
+    }
+
+    .dropdown-input{
+        transition: .5s ease;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 15px 30px rgba(0,0,0,.1);
+        background: #fff;
+
+        .input-title{
+            font-size: 1.3em;
+            font-weight: 900;
+            display: block;
+        }
+
+        input{
+            width: 100%;
+            outline: none;
+            border: none;
+            background: #F0F2F5;
+            padding: 10px;
+            font-size: 1.6em;
+
+            &:focus{
+                background: none;
+                border: 2px solid #385bce;
+            }
+        }
+    }
+}

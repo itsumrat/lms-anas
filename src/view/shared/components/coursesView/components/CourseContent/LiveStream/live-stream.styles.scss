@@ -1,0 +1,100 @@
+.live-stream_container{
+    height: 100vh;
+    .live-stream_header{
+        font-size: 5em;
+    }
+
+    .live-stream{
+        &>div:first-child{
+            width: 100%!important;
+            height: calc(100%)!important;
+        }
+    }
+
+    .live-and-chat{
+        &>div:first-child{
+            flex: 0 0 75%;
+            max-width: 75%;
+        }
+
+        &>div:last-child{
+            flex: 0 0 25%;
+            max-width: 25%;
+
+            .instruction_container{
+                width: 100%;
+                height: 50%;
+                padding: 20px;
+                background: #1E2126;
+                border: 12px solid #3E4043;
+                overflow-y: scroll;
+                color: #fff;
+
+                .instruction_header{
+                    font-size: 2em;
+                }
+
+                .instruction{
+                    font-size: 1.5em;
+                }
+            }
+
+            .chats_container{
+                width: 100%;
+                height: 50%;
+                overflow-y: scroll;
+                position: relative;
+                background: #ddd;
+
+                .chats-header{
+                    width: 100%;
+                    position: sticky;
+                    top: 0;
+                    left: 0;
+                    
+                    .top-chat{
+                        font-size: 1.5em;
+                        font-weight: 700;
+
+                        .fa-angle-down{
+                            color: #333;
+                        }
+                    }
+                }
+
+                .chats{
+                    height: 100%;
+
+                    .chat{
+                        .user-img_container{
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+
+                        .chat{
+                            font-size: 1em;
+                            color: #000;
+
+                            .username{
+                                color: #333;
+                                font-weight: 900;
+                            font-size: 1.3em;
+                            margin-right: 10px;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}
