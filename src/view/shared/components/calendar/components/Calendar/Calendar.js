@@ -98,7 +98,7 @@ function Calendar({ sampleJSON }) {
   const [newIntervals, setNewIntervals] = useState([]);
   const [newEventModalVisible, setNewEventModalVisible] = useState(false);
 
-  console.log(sampleJSON.data ? parseInt(sampleJSON.data.roomsession[0].start_time.split(':')[0]) : sampleJSON);
+  // console.log(sampleJSON.data ? parseInt(sampleJSON.data.roomsession[0].start_time.split(':')[0]) : sampleJSON);
 
   useEffect(() => {
     let endPoints = {
@@ -180,7 +180,7 @@ function Calendar({ sampleJSON }) {
         <WeekCalendar
           numberOfDays={7}
           firstDay={firstDayOfWeek}
-          cellHeight={cellHeight} 
+          cellHeight={cellHeight}
           dayFormat="dddd"
           scaleUnit={60}
           eventSpacing={0}

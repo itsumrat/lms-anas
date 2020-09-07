@@ -24,7 +24,7 @@ class TimeTableTeacherListTable extends Component {
   render() {
     const { pagination, rows, loading } = this.props;
     return (
-      <div>
+      <div style={{width: '100%'}}>
         <Calendar sampleJSON={rows} />
       </div>
     );

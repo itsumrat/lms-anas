@@ -51,6 +51,8 @@ event-modal-time .weekCalendar__overlay {
   border-color: lightgrey;
 }
 
+
+
 .weekCalendar__scaleCell,
 .weekCalendar__scaleHeader {
   border: none;
@@ -88,4 +90,20 @@ event-modal-time .weekCalendar__overlay {
 .weekCalendar__scaleHeader {
   /*height: var(--calendar-header-height);*/
   /*line-height: var(--calendar-header-height);*/
+}
+.weekCalendar{
+  width: 100% !important;
+}
+.weekCalendar__header{
+  width: 100% !important;
+}
+.weekCalendar__headerWrapper{
+  width: 99% !important;
+  display: flex;
+}
+.weekCalendar__headerColumn{
+  /*width: 228px !important;*/
+  /*display: block;*/
+  /*min-width: 228px !important;*/
+
 }
