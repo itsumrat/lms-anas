@@ -85,6 +85,7 @@ const parseEventsData = (events, firstDayOfWeek) => {
 };
 
 function Calendar({ sampleJSON }) {
+  console.log(sampleJSON)
   const firstDayOfWeek = moment().startOf('isoWeek');
   const windowSize = useWindowSize();
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -152,7 +153,7 @@ function Calendar({ sampleJSON }) {
     console.log(e)
     setNewEventModalVisible(true)
   }
-
+  console.log(events)
   return (
     <>
       {newEventModalVisible && (

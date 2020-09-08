@@ -17,15 +17,25 @@ import {
   sampleJSONForStudent,
   sampleJSONForTeacher,
 } from 'view/shared/components/calendar/temp/sampleJSON';
+import MonthCalendar from '../../shared/components/calendar/components/Calendar/MonthCalendar';
 
 const { fields } = model;
 
 class TimeTableTeacherListTable extends Component {
   render() {
     const { pagination, rows, loading } = this.props;
+    console.log(sampleJSONForStudent)
+    console.log(sampleJSONForTeacher)
+    console.log(rows)
     return (
       <div style={{width: '100%'}}>
-        <Calendar sampleJSON={rows} />
+        <MonthCalendar/>
+        <hr/>
+        <br/>
+        <Calendar sampleJSON={sampleJSONForTeacher} />
+
+
+
       </div>
     );
   }

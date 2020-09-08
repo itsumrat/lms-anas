@@ -38,7 +38,7 @@ const  NewIntervalModal = ({visible, setNewEventModalVisible, newIntervals, form
   return (
     <Modal
       width="80%"
-      visible={true}
+      visible={visible}
       onOk={()=>setNewEventModalVisible(false)}
       onCancel={()=>setNewEventModalVisible(false)}
       footer={false}
