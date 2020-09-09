@@ -24,18 +24,13 @@ const { fields } = model;
 class TimeTableTeacherListTable extends Component {
   render() {
     const { pagination, rows, loading } = this.props;
-    console.log(sampleJSONForStudent)
     console.log(sampleJSONForTeacher)
-    console.log(rows)
     return (
       <div style={{width: '100%'}}>
-        <MonthCalendar/>
-        <hr/>
-        <br/>
+
         <Calendar sampleJSON={sampleJSONForTeacher} />
-
-
-
+        <hr/>
+        <MonthCalendar/>
       </div>
     );
   }

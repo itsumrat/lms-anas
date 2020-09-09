@@ -8,6 +8,7 @@ import NewIntervalModal from '../common/Modal/NewIntervalModal';
 import EventModalForm from '../common/Modal/EventModalForm';
 // Setup the localizer by providing the moment (or globalize) Object
 // to the correct localizer.
+import './styles.css'
 const localizer = momentLocalizer(moment) // or globalizeLocalizer
 let allViews = Object.keys(Views).map(k => Views[k])
 const ColoredDateCellWrapper = ({ children }) =>

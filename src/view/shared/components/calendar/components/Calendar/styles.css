@@ -107,3 +107,15 @@ event-modal-time .weekCalendar__overlay {
   /*min-width: 228px !important;*/
 
 }
+.ant-form-item-label label{
+  margin-bottom: 0px !important;
+}
+.ant-modal-body {
+  background-color: #f0f2f5 !important;
+}
+.ant-modal-header {
+  background-color: #f0f2f5 !important;
+}
+.ant-modal-footer {
+  background-color: white !important;
+}
