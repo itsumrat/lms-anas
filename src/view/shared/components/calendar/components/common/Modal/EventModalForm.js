@@ -5,7 +5,6 @@ const {TextArea} = Input;
 const {RangePicker} = DatePicker;
 const dateFormat = 'YYYY/MM/DD';
 const EventModalForm = ({ onSubmit, visible, closeNewEventModal, activeSlot, form, eventType, type}) => {
-  console.log(activeSlot)
   const formItemLayout = {
     labelCol: {
       xs: { span: 24 },

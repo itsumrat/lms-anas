@@ -36,7 +36,6 @@ export const NewParseEvent = (event, firstDayOfWeek) => {
 
   const start = moment(`${startDate} ${event.start_time}`).toDate();
   const end = moment(`${start_time} ${event.end_time}`).toDate();
-  console.log(start)
   return {
     start,
     end,
@@ -57,17 +56,20 @@ export const parseEventsData = (events, firstDayOfWeek) => {
   });
 };
 
-export const EventView = ({ event }) => (
-  <div style={{background: event.bgColor, height: '100%'}} >
-    <div style={{display: 'flex', flexDirection: 'column', padding: 10}}>
-      <p style={{marginBottom: 5}}>
-        {moment(event.start,'MM-DD-YYYY HH:mm').format('HH:mm')}{` - `}
-        {moment(event.end,'MM-DD-YYYY HH:mm').format('HH:mm')}
-      </p>
-      <h3 >{event.title}</h3>
+export const EventView = ({event} ) => {
+    console.log(event)
+  return (
+    <div style={{background: event.bgColor, height: '100%'}} >
+      <div style={{display: 'flex', flexDirection: 'column', padding: 10}}>
+        <p style={{marginBottom: 5}}>
+          {moment(event.start,'MM-DD-YYYY HH:mm').format('HH:mm')}{` - `}
+          {moment(event.end,'MM-DD-YYYY HH:mm').format('HH:mm')}
+        </p>
+        <h5 style={{marginBottom: 0}} >{event.title}</h5>
+      </div>
     </div>
-  </div>
-);
+  );
+}
 class TimeTableTeacherListTable extends Component {
   render() {
     const { pagination, rows, loading } = this.props;

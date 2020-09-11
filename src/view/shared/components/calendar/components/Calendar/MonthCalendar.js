@@ -130,15 +130,13 @@ class MonthCalendar extends React.Component{
             })
 
           }}}
+          defaultDate={new Date()}
           popup={true}
           onShowMore={(events, date) => console.log(events)}
           events={this.state.events}
           views={["month"]}
           step={60}
           showMultiDayTimes
-          // components={{
-          //   timeSlotWrapper: ColoredDateCellWrapper,
-          // }}
           localizer={localizer}
           formats={{ eventTimeRangeFormat: () => null }}
           components={{

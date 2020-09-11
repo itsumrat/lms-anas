@@ -119,6 +119,23 @@ event-modal-time .weekCalendar__overlay {
 .ant-modal-footer {
   background-color: white !important;
 }
+/* month*/
+.rbc-month-row {
+  overflow: auto !important;
+}
+.rbc-month-row::-webkit-scrollbar {
+  width: 0px;
+}
+
+.rbc-month-row::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px #343f57;
+}
+
+.rbc-month-row::-webkit-scrollbar-thumb {
+  background-color: #343f57;
+  outline: none;
+}
+/*week*/
 
 .rbc-event {
   background: transparent !important;

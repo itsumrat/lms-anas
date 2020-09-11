@@ -25,7 +25,7 @@ export const monthlyEvents = [
     id: 0,
     title: 'All Day Event very long title',
     allDay: true,
-    start: new Date(2015, 3, 0),
+    start: new Date(2020, 3, 0),
     end: new Date(2015, 3, 1),
   },
   {
@@ -127,6 +127,24 @@ export const monthlyEvents = [
   },
   {
     id: 15,
+    title: 'Point in Time Event',
+    start: now,
+    end: now,
+  },
+  {
+    id: 54,
+    title: 'Point in Time Event',
+    start: now,
+    end: now,
+  },
+  {
+    id: 65,
+    title: 'Point in Time Event',
+    start: now,
+    end: now,
+  },
+  {
+    id: 86,
     title: 'Point in Time Event',
     start: now,
     end: now,
