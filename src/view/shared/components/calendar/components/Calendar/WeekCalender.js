@@ -82,6 +82,15 @@ const WeekCalender = ({sampleJSON})=>{
   const openNewEventModal = () =>{
    setNewVisible(true)
   }
+  const handleCreateNewEvent = (form)=>{
+    form.validateFields((err, values)=>{
+      if(err){
+        return;
+      }
+      console.log(values)
+      closeNewEventModal();
+    })
+  }
     return <div style={{height: 1000}}>
       <Modal
       event={activeSlot}
@@ -93,6 +102,7 @@ const WeekCalender = ({sampleJSON})=>{
           newIntervals={activeSlot}
           visible={newVisible}
           setNewEventModalVisible={closeNewEventModal}
+          handleCreateNewEvent={handleCreateNewEvent}
         />)
       }
       {

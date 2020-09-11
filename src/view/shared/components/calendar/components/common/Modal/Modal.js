@@ -22,6 +22,7 @@ export default function ReactModal({
       footer={false}
       centered
       className="event-modal"
+      destroyOnClose
       // closemodal={onClose}
       // type={windowSize.width > windowBreakPoint ? 'zoomIn' : 'fadeInRight'}>
      >

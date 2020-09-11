@@ -27,8 +27,28 @@ const formItemLayout2 = {
   },
 };
 
+const tailFormItemLayout = {
+  wrapperCol: {
+    xs: {
+      span: 16,
+      offset: 8,
+    },
+    sm: {
+      span: 8,
+      offset: 16,
+    },
+    md: {
+      span: 8,
+      offset: 16,
+    },
+    lg: {
+      span: 8,
+      offset: 16,
+    },
+  },
+};
 
-const  NewIntervalModal = ({visible, setNewEventModalVisible, newIntervals, form}) => {
+const  NewIntervalModal = ({visible, setNewEventModalVisible,handleCreateNewEvent,  newIntervals, form}) => {
 
   const { getFieldDecorator } = form;
   function onChange(time, timeString) {
@@ -38,11 +58,12 @@ const  NewIntervalModal = ({visible, setNewEventModalVisible, newIntervals, form
     <Modal
       width="80%"
       visible={visible}
-      onOk={()=>setNewEventModalVisible(false)}
+      onOk={()=>handleCreateNewEvent(form)}
       onCancel={()=>setNewEventModalVisible(false)}
-      footer={false}
       centered
       className="event-modal"
+      footer={false}
+      destroyOnClose
       // closemodal={onClose}
       // type={windowSize.width > windowBreakPoint ? 'zoomIn' : 'fadeInRight'}>
     >
@@ -50,13 +71,14 @@ const  NewIntervalModal = ({visible, setNewEventModalVisible, newIntervals, form
       <Form
         {...formItemLayout}
         layout="vertical"
+        onSubmit={handleCreateNewEvent}
       >
         <div className="event-modal-container">
           <div className="left-container" style={{backgroundColor: '#273044'}}>
-          <span className="event-modal-time">
-            {moment(newIntervals.start).format('HH:mm')} -{' '}
-            {moment(newIntervals.end).format('HH:mm')}
-          </span>
+          {/*<span className="event-modal-time">*/}
+          {/*  {moment(newIntervals.start).format('HH:mm')} -{' '}*/}
+          {/*  {moment(newIntervals.end).format('HH:mm')}*/}
+          {/*</span>*/}
             <Form.Item  label="Start Time">
               {getFieldDecorator('startTime', {
                 initialValue: moment(new Date(newIntervals.start)),
@@ -143,7 +165,7 @@ const  NewIntervalModal = ({visible, setNewEventModalVisible, newIntervals, form
               }
             >
               <Option value="room1">Room 1</Option>
-              <Option value="room1">Room 2</Option>
+              <Option value="room2">Room 2</Option>
               <Option value="room3">Room 3</Option>
             </Select>)}
           </Form.Item>
@@ -310,6 +332,17 @@ const  NewIntervalModal = ({visible, setNewEventModalVisible, newIntervals, form
               <Option value="Tom">Tom</Option>
 
             </Select>)}
+          </Form.Item>
+          <Form.Item {...tailFormItemLayout}>
+            <Button style={{marginRight: 20}} onClick={(e)=>{
+              e.preventDefault();
+              handleCreateNewEvent(form)
+            }} type="primary" htmlType="submit">
+              save
+            </Button>
+            <Button onClick={()=>setNewEventModalVisible(false)} type="danger" >
+              cancel
+            </Button>
           </Form.Item>
         </div>
         </div>
