@@ -90,6 +90,8 @@ class MonthCalendar extends React.Component{
             })
 
           }}}
+          popup={true}
+          onShowMore={(events, date) => console.log(events)}
           events={this.state.events}
           views={["month"]}
           step={60}
