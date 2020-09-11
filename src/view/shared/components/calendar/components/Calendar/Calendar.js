@@ -186,7 +186,7 @@ function Calendar({ sampleJSON }) {
           scaleUnit={60}
           eventSpacing={0}
           startTime={moment({
-            h: endPointsForCalendar.start,
+            h: Number(endPointsForCalendar.start),
             m: 0,
           })}
           endTime={moment({
