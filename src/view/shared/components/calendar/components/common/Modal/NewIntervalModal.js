@@ -30,7 +30,6 @@ const formItemLayout2 = {
 
 const  NewIntervalModal = ({visible, setNewEventModalVisible, newIntervals, form}) => {
 
-  console.log(newIntervals)
   const { getFieldDecorator } = form;
   function onChange(time, timeString) {
     console.log(time, timeString);
@@ -55,20 +54,20 @@ const  NewIntervalModal = ({visible, setNewEventModalVisible, newIntervals, form
         <div className="event-modal-container">
           <div className="left-container" style={{backgroundColor: '#273044'}}>
           <span className="event-modal-time">
-            {moment(newIntervals[0].start).format('HH:mm')} -{' '}
-            {moment(newIntervals[0].end).format('HH:mm')}
+            {moment(newIntervals.start).format('HH:mm')} -{' '}
+            {moment(newIntervals.end).format('HH:mm')}
           </span>
             <Form.Item  label="Start Time">
               {getFieldDecorator('startTime', {
-                initialValue: newIntervals[0].start,
+                initialValue: moment(new Date(newIntervals.start)),
                 rules: [{ type: 'object', required: true, message: 'Please select time!' }]
-              })(<TimePicker style={{ width: 150 }}  allowClear={false} />)}
+              })(<TimePicker format="HH:mm" style={{ width: 150 }}  allowClear={false} />)}
             </Form.Item>
             <Form.Item label="EndTime">
               {getFieldDecorator('endTime', {
-                initialValue:newIntervals[0].end,
+                initialValue:moment(new Date(newIntervals.end)),
                 rules: [{ type: 'object', required: true, message: 'Please select time!' }]
-              })(<TimePicker style={{ width: 150 }}   allowClear={false} />)}
+              })(<TimePicker format="HH:mm" style={{ width: 150 }}   allowClear={false} />)}
             </Form.Item>
             <Form.Item label="Day">
               {getFieldDecorator('day', {

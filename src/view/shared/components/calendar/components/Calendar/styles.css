@@ -41,72 +41,72 @@
 event-modal-time .weekCalendar__overlay {
   box-shadow: 0 15px 32px rgba(0, 0, 0, 0.1), inset 0 -3px 0 rgba(0, 0, 0, 0.2);
 }
-.weekCalendar__scaleHeader,
-.weekCalendar__scaleColumn,
-.weekCalendar__headerWrapper,
-.calendarBody__column,
-.calendarBody__cell,
-.weekCalendar__scaleCell,
-.weekCalendar__headerColumn {
-  border-color: lightgrey;
-}
+/*.weekCalendar__scaleHeader,*/
+/*.weekCalendar__scaleColumn,*/
+/*.weekCalendar__headerWrapper,*/
+/*.calendarBody__column,*/
+/*.calendarBody__cell,*/
+/*.weekCalendar__scaleCell,*/
+/*.weekCalendar__headerColumn {*/
+/*  border-color: lightgrey;*/
+/*}*/
 
 
 
-.weekCalendar__scaleCell,
-.weekCalendar__scaleHeader {
-  border: none;
-}
+/*.weekCalendar__scaleCell,*/
+/*.weekCalendar__scaleHeader {*/
+/*  border: none;*/
+/*}*/
 
-.weekCalendar__scaleHeader {
-  border-right: 1px solid lightgrey;
-}
+/*.weekCalendar__scaleHeader {*/
+/*  border-right: 1px solid lightgrey;*/
+/*}*/
 
-.weekCalendar__scaleCell span {
-  display: inline-block;
-  position: relative;
-  top: -45px;
-}
+/*.weekCalendar__scaleCell span {*/
+/*  display: inline-block;*/
+/*  position: relative;*/
+/*  top: -45px;*/
+/*}*/
 
-.dayCell:hover {
-  cursor: default;
-  background-color: white !important;
-  border-color: white !important;
-}
-.weekCalendar__scaleHeader,
-.weekCalendar__headerWrapper {
-  background-color: transparent;
-  font-weight: lighter;
-}
+/*.dayCell:hover {*/
+/*  cursor: default;*/
+/*  background-color: white !important;*/
+/*  border-color: white !important;*/
+/*}*/
+/*.weekCalendar__scaleHeader,*/
+/*.weekCalendar__headerWrapper {*/
+/*  background-color: transparent;*/
+/*  font-weight: lighter;*/
+/*}*/
 
-.weekCalendar,
-.weekCalendar__scaleColumn {
-  /*padding-top: var(--calendar-header-height);*/
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-}
+/*.weekCalendar,*/
+/*.weekCalendar__scaleColumn {*/
+/*  !*padding-top: var(--calendar-header-height);*!*/
+/*  border-top: 1px solid;*/
+/*  border-bottom: 1px solid;*/
+/*}*/
 
-.weekCalendar__header,
-.weekCalendar__scaleHeader {
-  /*height: var(--calendar-header-height);*/
-  /*line-height: var(--calendar-header-height);*/
-}
-.weekCalendar{
-  width: 100% !important;
-}
-.weekCalendar__header{
-  width: 100% !important;
-}
-.weekCalendar__headerWrapper{
-  width: 99% !important;
-  display: flex;
-}
-.weekCalendar__headerColumn{
-  /*width: 228px !important;*/
-  /*display: block;*/
-  /*min-width: 228px !important;*/
+/*.weekCalendar__header,*/
+/*.weekCalendar__scaleHeader {*/
+/*  !*height: var(--calendar-header-height);*!*/
+/*  !*line-height: var(--calendar-header-height);*!*/
+/*}*/
+/*.weekCalendar{*/
+/*  width: 100% !important;*/
+/*}*/
+/*.weekCalendar__header{*/
+/*  width: 100% !important;*/
+/*}*/
+/*.weekCalendar__headerWrapper{*/
+/*  width: 99% !important;*/
+/*  display: flex;*/
+/*}*/
+/*.weekCalendar__headerColumn{*/
+/*  !*width: 228px !important;*!*/
+/*  !*display: block;*!*/
+/*  !*min-width: 228px !important;*!*/
 
-}
+/*}*/
 .ant-form-item-label label{
   margin-bottom: 0px !important;
 }
@@ -118,4 +118,11 @@ event-modal-time .weekCalendar__overlay {
 }
 .ant-modal-footer {
   background-color: white !important;
+}
+
+.rbc-event {
+  background: transparent !important;
+  border: none !important;
+  padding: 0px !important;
+
 }
