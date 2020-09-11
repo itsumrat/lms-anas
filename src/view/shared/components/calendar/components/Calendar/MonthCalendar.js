@@ -18,6 +18,49 @@ const ColoredDateCellWrapper = ({ children }) =>
     },
   })
 
+
+const CustomToolbar = (toolbar) => {
+  const goToBack = () => {
+    toolbar.date.setMonth(toolbar.date.getMonth() - 1);
+    toolbar.onNavigate('prev');
+  };
+
+  const goToNext = () => {
+    toolbar.date.setMonth(toolbar.date.getMonth() + 1);
+    toolbar.onNavigate('next');
+  };
+
+  const goToCurrent = () => {
+    const now = new Date();
+    toolbar.date.setMonth(now.getMonth());
+    toolbar.date.setFullYear(now.getFullYear());
+    toolbar.onNavigate('current');
+  };
+
+  const label = () => {
+    const date = moment(toolbar.date);
+    return (
+      <span><b>{date.format('MMMM')}</b><span> {date.format('YYYY')}</span></span>
+    );
+  };
+
+  return (
+    <div className='toolbar-container'>
+      <label className='label-date'>{label()}</label>
+
+      <div className='back-next-buttons'>
+        <div className='today-wrapper'>
+          <button  className='btn-current' onClick={goToCurrent}>Today</button>
+        </div>
+        <div className="navigation-wrapper">
+          <button className='btn-back' onClick={goToBack}>&#8249;</button>
+          <button className='btn-next' onClick={goToNext}>&#8250;</button>
+        </div>
+      </div>
+    </div >
+  );
+};
+
 class MonthCalendar extends React.Component{
   constructor(props) {
     super(props);
@@ -100,6 +143,7 @@ class MonthCalendar extends React.Component{
           formats={{ eventTimeRangeFormat: () => null }}
           components={{
             event: EventView,
+            toolbar: CustomToolbar
           }}
         />
         </div>

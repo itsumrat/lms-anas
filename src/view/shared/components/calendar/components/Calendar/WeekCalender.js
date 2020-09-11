@@ -91,7 +91,7 @@ const WeekCalender = ({sampleJSON})=>{
       closeNewEventModal();
     })
   }
-    return <div style={{height: 1000}}>
+    return <div style={{height: 800}}>
       <Modal
       event={activeSlot}
       isOpen={visible}
@@ -131,12 +131,13 @@ const WeekCalender = ({sampleJSON})=>{
             defaultView={Views.WEEK}
             scrollToTime={new Date(1970, 1, 1, 6)}
             dayLayoutAlgorithm="no-overlap"
+            toolbar={false}
             min={
               new Date(
                 today.getFullYear(),
                 today.getMonth(),
                 today.getDate(),
-                9
+                8
               )
             }
             // end time 9:00pm
@@ -154,6 +155,7 @@ const WeekCalender = ({sampleJSON})=>{
                 header: ({ date, localizer }) => localizer.format(date, 'dddd'),
               },
               event: EventView,
+
             }}
 
           />
