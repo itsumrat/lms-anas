@@ -29,7 +29,6 @@ const WeekCalender = ({sampleJSON})=>{
     start: 9,
     end: 21,
   });
-  console.log(firstDayOfWeek)
   useEffect(() => {
     let endPoints = {
       start: 0,

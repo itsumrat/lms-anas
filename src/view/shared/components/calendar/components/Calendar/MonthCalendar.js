@@ -29,8 +29,6 @@ class MonthCalendar extends React.Component{
     }
   }
   componentDidMount() {
-    console.log(this.props)
-
     this.setState({
       events: parseEventsData(this.props.sampleJSON.data.roomsession, moment().startOf('isoWeek'))
     })
@@ -81,7 +79,6 @@ class MonthCalendar extends React.Component{
             })
           }}
           onSelectEvent={event=>{{
-            console.log(event);
             this.setState({
               activeSlot: event,
               eventType: false
