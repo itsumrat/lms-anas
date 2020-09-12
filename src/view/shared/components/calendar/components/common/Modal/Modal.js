@@ -13,6 +13,8 @@ export default function ReactModal({
   windowSize,
   windowBreakPoint,
 }) {
+  console.log(type)
+  console.log(event)
   return (
     <Modal
       width="80%"

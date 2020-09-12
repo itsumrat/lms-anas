@@ -17,55 +17,26 @@ const localizer = momentLocalizer(moment) // or globalizeLocalizer
 const today = new Date();
 
 
-const WeekCalender = ({sampleJSON})=>{
+const WeekCalender = ({type, roomsession, sampleJSON})=>{
   const windowSize = useWindowSize();
   const firstDayOfWeek = moment().startOf('isoWeek');
   const [visible, setVisible] = useState(false);
   const [newVisible, setNewVisible] = useState(false);
   const [activeSlot, setActiveSlot] = useState({});
-  const [isRender, setIsRender] = useState(true);
   const [events, setEvents] = useState([]);
-  const [endPointsForCalendar, setEndPoints] = useState({
-    start: 9,
-    end: 21,
-  });
-  useEffect(() => {
-    let endPoints = {
-      start: 0,
-      end: 0,
-    };
 
+  useEffect(() => {
     if (
-      sampleJSON &&
-      sampleJSON.data &&
-      sampleJSON.data.roomsession &&
-      sampleJSON.data.roomsession.length &&
-      isRender
+      roomsession &&
+      roomsession.length > 0
     ) {
       const events = parseEventsData(
-        sampleJSON.data.roomsession,
+        roomsession,
         firstDayOfWeek,
       );
-
-      // endPoints.start = events.reduce((min, event) => {
-      //   const hour = moment(event.start).format('HH');
-      //
-      //   return hour < min ? hour : min;
-      // }, moment(events[0].start).format('HH'));
-      //
-      // endPoints.end = events.reduce((max, event) => {
-      //   const hour = moment(event.end).format('HH');
-      //
-      //   return max < hour ? hour : max;
-      // }, moment(events[0].end).format('HH'));
-      //
-      // endPoints.start &&
-      // endPoints.end &&
-      // setEndPoints(endPoints);
       setEvents(events);
-      setIsRender(false);
     }
-  }, [sampleJSON]);
+  }, [type, roomsession]);
   const closeEventModal = ()=>{
     setVisible(false)
   }
@@ -96,6 +67,7 @@ const WeekCalender = ({sampleJSON})=>{
       event={activeSlot}
       isOpen={visible}
       onClose={closeEventModal}
+      type={type}
       />
       {
         newVisible && (<NewIntervalModal
