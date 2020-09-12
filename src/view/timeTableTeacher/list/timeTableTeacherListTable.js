@@ -57,7 +57,6 @@ export const parseEventsData = (events, firstDayOfWeek) => {
 };
 
 export const EventView = ({event} ) => {
-    console.log(event)
   return (
     <div style={{background: event.bgColor, height: '100%'}} >
       <div style={{display: 'flex', flexDirection: 'column', padding: 10}}>
@@ -76,7 +75,7 @@ class TimeTableTeacherListTable extends Component {
     // console.log(sampleJSONForTeacher)
     return (
       <div style={{width: '100%'}}>
-        <WeekCalender sampleJSON={sampleJSONForTeacher}/>
+        <WeekCalender  type={sampleJSONForStudent.data.type} roomsession={sampleJSONForStudent.data.roomsession} sampleJSON={sampleJSONForStudent}/>
         {/*<Calendar sampleJSON={sampleJSONForTeacher} />*/}
         <hr/>
         <MonthCalendar sampleJSON={sampleJSONForStudent}/>
